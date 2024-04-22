@@ -12,6 +12,7 @@ export default {
 
       fontFamily: {
         anek: ["Anek Bangla", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
