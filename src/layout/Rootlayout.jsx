@@ -10,7 +10,9 @@ const Rootlayout = () => {
         <Sidebar />
       </div>
       <div className="w-9/12">
-        <Outlet />
+        {/* <Outlet /> */}
+
+        <h1>Hewllo</h1>
       </div>
     </Flex>
   );
