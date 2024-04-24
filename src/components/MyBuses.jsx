@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Flex from "./Flex";
 import Title from "./Title";
-import TodayBus from "./cards/TodayBus";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import Mybus from "./cards/Mybus";
 
-const TodaysBus = () => {
+const MyBuses = () => {
   const [slide, setSlide] = useState(0);
   const settings = {
     dots: true,
@@ -69,7 +69,7 @@ const TodaysBus = () => {
   return (
     <section>
       <Flex className={`items-center justify-between`}>
-        <Title>আজকের বাস সমুহ</Title>
+        <Title>আমার বাসসমুহঃ</Title>
         <button className=" font-anek font-bold text-[30px] text-primary">
           See All
         </button>
@@ -77,18 +77,17 @@ const TodaysBus = () => {
 
       <div className="mt-9 w-full">
         <Slider {...settings}>
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
+          <Mybus />
+          <Mybus />
+          <Mybus />
+          <Mybus />
+          <Mybus />
+          <Mybus />
+          <Mybus />
         </Slider>
       </div>
     </section>
   );
 };
 
-export default TodaysBus;
+export default MyBuses;
