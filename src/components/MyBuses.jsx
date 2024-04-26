@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Flex from "./Flex";
 import Title from "./Title";
+import Mybus from "./cards/Mybus";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import Mybus from "./cards/Mybus";
 
 const MyBuses = () => {
   const [slide, setSlide] = useState(0);
@@ -68,24 +67,17 @@ const MyBuses = () => {
   };
   return (
     <section>
-      <Flex className={`items-center justify-between`}>
-        <Title>আমার বাসসমুহঃ</Title>
-        <button className=" font-anek font-bold text-[30px] text-primary">
-          See All
-        </button>
-      </Flex>
+      <Title>আমার বাসসমুহঃ</Title>
 
-      <div className="mt-9 w-full">
-        <Slider {...settings}>
-          <Mybus />
-          <Mybus />
-          <Mybus />
-          <Mybus />
-          <Mybus />
-          <Mybus />
-          <Mybus />
-        </Slider>
+      <div className=" flex items-center justify-between mt-9 w-full">
+        <Mybus />
+        <Mybus />
+        <Mybus />
       </div>
+
+      <button className=" font-anek font-bold text-[20px] text-primary my-4 mx-auto block">
+        See All
+      </button>
     </section>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Title from "./Title";
-import Flex from "./Flex";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import StatusCard from "./cards/StatusCard";
@@ -69,25 +68,17 @@ const AllbookingStatus = () => {
   };
   return (
     <section>
-      <Flex className={`items-center justify-between`}>
-        <Title>বুকিং স্ট্যাটাসঃ</Title>
-        <button className=" font-anek font-bold text-[30px] text-primary">
-          See All
-        </button>
-      </Flex>
+      <Title>বুকিং স্ট্যাটাসঃ</Title>
 
-      <div className="mt-9 w-full">
-        <Slider {...settings}>
-          <StatusCard />
-          <StatusCard />
-          <StatusCard />
-          <StatusCard />
-          <StatusCard />
-          <StatusCard />
-        </Slider>
-
-        {/* <TodayBus /> */}
+      <div className=" flex items-center justify-between mt-9 w-full">
+        <StatusCard />
+        <StatusCard />
+        <StatusCard />
       </div>
+
+      <button className=" font-anek font-bold text-[20px] text-primary my-4 mx-auto block">
+        See All
+      </button>
     </section>
   );
 };

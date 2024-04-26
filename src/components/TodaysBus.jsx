@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Flex from "./Flex";
 import Title from "./Title";
 import TodayBus from "./cards/TodayBus";
 import Slider from "react-slick";
@@ -68,25 +67,17 @@ const TodaysBus = () => {
   };
   return (
     <section>
-      <Flex className={`items-center justify-between`}>
-        <Title>আজকের বাস সমুহ</Title>
-        <button className=" font-anek font-bold text-[30px] text-primary">
-          See All
-        </button>
-      </Flex>
+      <Title>আজকের বাস সমুহ</Title>
 
-      <div className="mt-9 w-full">
-        <Slider {...settings}>
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-          <TodayBus />
-        </Slider>
+      <div className=" flex items-center justify-between mt-9 w-full">
+        <TodayBus />
+        <TodayBus />
+        <TodayBus />
       </div>
+
+      <button className=" font-anek font-bold text-[20px] text-primary my-4 mx-auto block">
+        See All
+      </button>
     </section>
   );
 };
